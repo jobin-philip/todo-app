@@ -7,10 +7,25 @@
 </head>
 <body>
     <h1>Todo List</h1>
-    <ul>
-        <li th:each="todoItem : ${todoItems}">
-            <span th:text="${todoItem.description}"></span>
-        </li>
-    </ul>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Description</th>
+                <th>Completed</th>
+                <th>Created Date</th>
+                <th>Modified Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="todoItem : ${todoItems}">
+                <td th:text="${todoItem.id}"></td>
+                <td th:text="${todoItem.description}"></td>
+                <td th:text="${todoItem.completed}"></td>
+                <td th:text="${todoItem.createdDate}"></td>
+                <td th:text="${todoItem.modifiedDate}"></td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/3.4.1/css/bootstrap.min.css} " />
+    <title>Todo Application</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-md-6">
+            <form action="#" th:action="@{/todo/{id}(id=${todoItem.id})}" th:object="${todoItem}" method="POST">
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input class="form-control" type="text" th:field="*{description}" id="description"
+                        placeholder="Add a description">
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" th:checked="${todoItem.completed} == true" th:field="*{completed}"
+                            id="completed" />
+                        Completed
+                    </label>
+                </div>
+                <button class="btn btn-default" type="submit">Update</button>
+
+                <input type="hidden" th:field="*{createdDate}" />
+                <input type="hidden" th:field="*{modifiedDate}" />
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

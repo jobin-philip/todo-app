@@ -2,7 +2,7 @@ package dev.jobinphilip.todoapp.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -16,7 +16,7 @@ public class TodoItemDataLoader implements CommandLineRunner{
 
     private final TodoItemRepository todoItemRepository;
 
-    @Autowired
+    //@Autowired
     public TodoItemDataLoader(TodoItemRepository todoItemRepository) {
         this.todoItemRepository = todoItemRepository;
     }

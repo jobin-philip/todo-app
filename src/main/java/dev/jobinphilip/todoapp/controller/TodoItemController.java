@@ -6,7 +6,7 @@ import javax.validation.Valid;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -25,7 +25,7 @@ public class TodoItemController {
 
     private final TodoItemRepository todoItemRepository;
 
-    @Autowired
+    //@Autowired
     public TodoItemController(TodoItemRepository todoItemRepository) {
         this.todoItemRepository = todoItemRepository;
     }

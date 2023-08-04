@@ -23,6 +23,11 @@ public class TodoFormController {
         this.todoItemRepository = todoItemRepository;
     }
 
+    @GetMapping("/create-todo")
+    public String showCreateForm(TodoItem todoItem){
+        return "add-todo-item";
+    }
+
     @GetMapping("/edit/{id}")
     public String showEditForm(@PathVariable("id") Long id, Model model) {
         logger.debug("Entering showEditForm method. ID: {}", id);

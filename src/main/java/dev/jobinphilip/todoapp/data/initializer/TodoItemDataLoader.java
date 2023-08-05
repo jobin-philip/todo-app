@@ -1,4 +1,4 @@
-package dev.jobinphilip.todoapp.config;
+package dev.jobinphilip.todoapp.data.initializer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

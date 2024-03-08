@@ -15,11 +15,11 @@ Make sure you have the following installed:
    git clone https://github.com/jobin-philip/todo-app.git
    cd todo-app
    ```
-1. **Run the application:**
+2. **Run the application:**
    ```bash
    mvnw spring-boot:run
    ```
-1. **Access the application:**
+3. **Access the application:**
    Open your web browser and go to http://localhost:8080
    
 ## Features
